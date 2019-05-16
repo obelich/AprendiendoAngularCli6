@@ -4,18 +4,26 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ValueComponent } from './value/value.component';
 import { HttpClient } from 'selenium-webdriver/http';
+import { FormsModule } from '@angular/forms';
+
 import {HttpClientModule} from '@angular/common/http';
+import { NavComponent } from './nav/nav.component';
+import { AuthService } from './_services/auth.service';
 
 @NgModule({
    declarations: [
       AppComponent,
-      ValueComponent
+      ValueComponent,
+      NavComponent
    ],
    imports: [
       BrowserModule,
-      HttpClientModule
+      HttpClientModule,
+      FormsModule
    ],
-   providers: [],
+   providers: [
+      AuthService
+   ],
    bootstrap: [
       AppComponent
    ]
