@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HttpClient } from 'selenium-webdriver/http';
+
 import { FormsModule } from '@angular/forms';
 
 import {HttpClientModule} from '@angular/common/http';
@@ -14,6 +15,13 @@ import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { AlertifyService } from './_services/alertify.service';
 
 import { BsDropdownModule } from 'ngx-bootstrap';
+import { RouterModule } from '@angular/router';
+
+import { ListsComponent } from './lists/lists.component';
+import { MessagesComponent } from './messages/messages.component';
+import { MemberListComponent } from './member-list/member-list.component';
+import { appRoutes } from './routes';
+
 
 @NgModule({
    declarations: [
@@ -21,12 +29,16 @@ import { BsDropdownModule } from 'ngx-bootstrap';
       NavComponent,
       HomeComponent,
       RegisterComponent,
+      ListsComponent,
+      MessagesComponent,
+      MemberListComponent
    ],
    imports: [
       BrowserModule,
       HttpClientModule,
       FormsModule,
       BsDropdownModule.forRoot(),
+      RouterModule.forRoot(appRoutes)
    ],
    providers: [
       AuthService,
