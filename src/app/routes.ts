@@ -16,7 +16,7 @@ export const appRoutes: Routes = [
             { path: 'messages',      component: MessagesComponent},
             { path: 'lists',         component: ListsComponent},
         ]
-    }
+    },
 
 
     { path: '**',            redirectTo: '', pathMatch: 'full'}
